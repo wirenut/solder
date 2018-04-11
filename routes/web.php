@@ -16,6 +16,9 @@ Route::post('/logout', 'Auth\LoginController@logout')->name('auth.logout');
 Route::middleware('auth')->group(function () {
     Route::get('/', 'DashboardController');
 
+    Route::get('forge', 'ForgeController@getMCVersions');
+    Route::get('forge/{mcversion}', 'ForgeController@getForgeVersions');
+
     Route::get('/modpacks/{modpack}', 'ModpacksController@show');
     Route::post('/modpacks', 'ModpacksController@store');
     Route::patch('/modpacks/{modpack}', 'ModpacksController@update');

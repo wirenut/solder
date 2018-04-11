@@ -31,6 +31,8 @@ Vue.component('build-table', require('./components/BuildTable.vue'));
 Vue.component('passport-personal-access-tokens', require('./components/PersonalAccessTokens.vue'));
 Vue.component('assistant', require('./components/Assistant'));
 
+Vue.component('build-settings', require('./components/builds/BuildSettings.vue'));
+
 const app = new Vue({
     el: '#app'
 });
